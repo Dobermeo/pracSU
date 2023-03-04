@@ -1,11 +1,11 @@
 package com.example.suple.repository
 
-import com.example.suple.model.Invoice
+import com.example.suple.model.SubjectView
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface InvoiceRepository: JpaRepository <Invoice, Long> {
+interface SubjectViewRepository: JpaRepository <SubjectView, Long> {
 
-    fun findById(id: Long?):Invoice?
+    fun findById(id: Long?):SubjectView?
 }

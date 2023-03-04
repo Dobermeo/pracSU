@@ -7,17 +7,17 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.Table
-import javax.validation.constraints.NotBlank
 
 
 @Entity
-@Table(name="invoice")
-class Invoice {
+@Table(name="subjectView")
+class SubjectView {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(updatable = false)
     var id: Long? = null
-    var fecha: Date? = null
-    var total: Double? = null
-    var clientId: Long? = null
+  var description: String? = null
+  var course: Long? = null
+  var teacherId: Long? = null
+  var teacher: String? = null
 }

@@ -10,14 +10,13 @@ import javax.persistence.Table
 
 
 @Entity
-@Table(name="invoiceView")
-class InvoiceView {
+@Table(name="subject")
+class Subject {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(updatable = false)
     var id: Long? = null
-    var fecha: Date? = null
-    var total: Double? = null
-    var clientId: Long? = null
-    var client: String? = null
+    var description: String? = null
+    var course: Long? = null
+    var teacherId: Long? = null
 }
