@@ -22,7 +22,7 @@ class SubjectService {
   lateinit var subjectViewRepository: SubjectViewRepository
 
   @Autowired
-  lateinit var clientRepository: TeacherRepository
+  lateinit var teacherRepository: TeacherRepository
 
   fun list(): List<Subject> {
     return subjectRepository.findAll()
@@ -40,7 +40,7 @@ class SubjectService {
   fun save(subject: Subject): Subject {
     try {
 
-      clientRepository.findById(subject.teacherId)
+      teacherRepository.findById(subject.teacherId)
         ?: throw Exception("Id del cliente no encontrada")
       return subjectRepository.save(subject)
     } catch (ex: Exception) {
